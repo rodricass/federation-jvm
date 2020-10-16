@@ -26,6 +26,18 @@ public class GraphQLDataFetchers {
                     "authorId", "author-3")
     );
 
+    private static List<Map<String, String>> notifications = Arrays.asList(
+            ImmutableMap.of("id", "1",
+                    "text", "Evolucion numero 1",
+                    "caseId", "111"),
+            ImmutableMap.of("id", "2",
+                    "text", "Evolucion numero 2",
+                    "caseId", "222"),
+            ImmutableMap.of("id", "3",
+                    "text", "Evolucion numero 3",
+                    "caseId", "333")
+    );
+
     private static List<Map<String, String>> authors = Arrays.asList(
             ImmutableMap.of("id", "author-1",
                     "firstName", "Joanne",
@@ -38,12 +50,12 @@ public class GraphQLDataFetchers {
                     "lastName", "Rice")
     );
 
-    public static DataFetcher getBookByIdDataFetcher() {
+    public static DataFetcher getNotificationById() {
         return dataFetchingEnvironment -> {
-            String bookId = dataFetchingEnvironment.getArgument("id");
-            return books
+            String notificationId = dataFetchingEnvironment.getArgument("id");
+            return notifications
                     .stream()
-                    .filter(book -> book.get("id").equals(bookId))
+                    .filter(book -> book.get("id").equals(notificationId))
                     .findFirst()
                     .orElse(null);
         };

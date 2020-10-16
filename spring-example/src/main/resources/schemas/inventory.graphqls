@@ -1,16 +1,13 @@
+type Notification @key(fields: "id"){
+      id: String!
+      case: Case!
+      text: String!
+}
+
+type Case @key(fields: "id") @extends {
+    id: String! @external
+}
+
 type Query {
-  bookById(id: ID): Book
-}
-
-type Book {
-  id: ID
-  name: String
-  pageCount: Int
-  author: Author
-}
-
-type Author {
-  id: ID
-  firstName: String
-  lastName: String
+    getNotificationById(id: String): Notification
 }
