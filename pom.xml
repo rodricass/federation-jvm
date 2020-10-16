@@ -80,6 +80,7 @@
 
     <dependencyManagement>
         <dependencies>
+
             <dependency>
                 <groupId>com.graphql-java-kickstart</groupId>
                 <artifactId>graphql-spring-boot-starter</artifactId>
@@ -95,6 +96,11 @@
                 <artifactId>graphql-spring-boot-starter-test</artifactId>
                 <version>${graphql-spring-boot.version}</version>
                 <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.graphql-java-kickstart</groupId>
+                <artifactId>playground-spring-boot-starter</artifactId>
+                <version>${graphql-spring-boot.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.graphql-java</groupId>
