@@ -2,6 +2,7 @@ package com.apollographql.federation.springexample;
 
 import com.apollographql.federation.graphqljava.Federation;
 import com.coxautodev.graphql.tools.SchemaParser;
+import com.graphqljava.tutorial.bookdetails.GraphQLDataFetchers;
 import graphql.schema.DataFetcher;
 import graphql.schema.GraphQLSchema;
 import graphql.schema.StaticDataFetcher;

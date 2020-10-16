@@ -3,3 +3,8 @@ spring:
     name: federation-jvm-spring-example
 server:
   port: 9000
+
+#graphql:
+#  playground:
+#    cdn:
+#      enabled: true
