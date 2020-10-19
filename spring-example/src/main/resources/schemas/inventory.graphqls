@@ -14,3 +14,8 @@ type Author {
   firstName: String
   lastName: String
 }
+
+type Client @key(fields: "id") @extends {
+    id: ID! @external
+    books: [Book!]!
+}

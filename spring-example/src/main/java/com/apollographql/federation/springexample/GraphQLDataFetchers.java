@@ -1,4 +1,4 @@
-package com.graphqljava.tutorial.bookdetails;
+package com.apollographql.federation.springexample;
 
 import com.google.common.collect.ImmutableMap;
 import graphql.schema.DataFetcher;
@@ -38,7 +38,7 @@ public class GraphQLDataFetchers {
                     "lastName", "Rice")
     );
 
-    public DataFetcher getBookByIdDataFetcher() {
+    public static DataFetcher getBookByIdDataFetcher() {
         return dataFetchingEnvironment -> {
             String bookId = dataFetchingEnvironment.getArgument("id");
             return books
@@ -49,7 +49,7 @@ public class GraphQLDataFetchers {
         };
     }
 
-    public DataFetcher getAuthorDataFetcher() {
+    public static DataFetcher getAuthorDataFetcher() {
         return dataFetchingEnvironment -> {
             Map<String, String> book = dataFetchingEnvironment.getSource();
             String authorId = book.get("authorId");
